@@ -1,0 +1,139 @@
+object frmAbrechnen: TfrmAbrechnen
+  Left = 316
+  Top = 266
+  BorderStyle = bsDialog
+  Caption = 
+    'Personal abrechnen  ( Personal ohne Umsatz wird hier nicht angez' +
+    'eigt )'
+  ClientHeight = 477
+  ClientWidth = 782
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poMainFormCenter
+  Scaled = False
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnResize = FormResize
+  PixelsPerInch = 96
+  TextHeight = 13
+  object panTop: TPanel
+    Left = 0
+    Top = 0
+    Width = 782
+    Height = 49
+    Align = alTop
+    BevelInner = bvLowered
+    BorderWidth = 1
+    Caption = 'Personalabrechung'
+    Color = clMedGray
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -21
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 0
+  end
+  object panInfo: TPanel
+    Left = 129
+    Top = 49
+    Width = 653
+    Height = 428
+    Align = alClient
+    BevelInner = bvLowered
+    BorderWidth = 1
+    TabOrder = 1
+    object grdInfo: TStringGrid
+      Left = 3
+      Top = 3
+      Width = 647
+      Height = 422
+      TabStop = False
+      Align = alClient
+      BorderStyle = bsNone
+      Color = clWhite
+      ColCount = 4
+      DefaultColWidth = 200
+      DefaultRowHeight = 16
+      DefaultDrawing = False
+      FixedCols = 0
+      RowCount = 1
+      FixedRows = 0
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Verdana'
+      Font.Style = []
+      GridLineWidth = 0
+      Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goColSizing, goRowSelect, goThumbTracking]
+      ParentFont = False
+      TabOrder = 0
+      OnDrawCell = grdInfoDrawCell
+      OnMouseDown = grdInfoMouseDown
+    end
+  end
+  object panPers: TPanel
+    Left = 0
+    Top = 49
+    Width = 129
+    Height = 428
+    Align = alLeft
+    BevelInner = bvLowered
+    BorderWidth = 1
+    Ctl3D = True
+    ParentCtl3D = False
+    TabOrder = 2
+    object grpbtn: TButtonGroup
+      Left = 3
+      Top = 3
+      Width = 123
+      Height = 246
+      Align = alTop
+      ButtonHeight = 40
+      ButtonWidth = 100
+      ButtonOptions = [gboFullSize, gboShowCaptions]
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      Items = <>
+      TabOrder = 0
+      TabStop = False
+      OnButtonClicked = grpbtnButtonClicked
+    end
+    object lbPers: TListBox
+      Left = 3
+      Top = 249
+      Width = 123
+      Height = 141
+      TabStop = False
+      Align = alClient
+      Color = clWhite
+      ItemHeight = 13
+      TabOrder = 1
+    end
+    object panAbrechnen: TPanel
+      Left = 3
+      Top = 390
+      Width = 123
+      Height = 35
+      Align = alBottom
+      Caption = 'Abrechnen'
+      Color = clSilver
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 2
+      OnClick = panAbrechnenClick
+    end
+  end
+end
